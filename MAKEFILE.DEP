@@ -1,0 +1,14 @@
+# IBM Developer's Workframe/2 Make File Creation run at 17:28:38 on 04/24/93
+
+# Make File Creation run in directory:
+#   G:\SHUTDOWN;
+
+# Assumed INCLUDE environment variable path:
+#   G:\IBMC\INCLUDE;
+#   G:\TOOLKT20\C\OS2H;
+#   G:\TOOLKT20\ASM\OS2INC;
+
+
+SHUTDOWN.OBJ:  SHUTDOWN.C  \
+#  {$(INCLUDE);}OS2.H  \
+   MAKEFILE

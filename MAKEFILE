@@ -1,0 +1,27 @@
+# IBM Developer's Workframe/2 Make File Creation run at 17:28:38 on 04/24/93
+
+# Make File Creation run in directory:
+#   G:\SHUTDOWN;
+
+.SUFFIXES:
+
+.SUFFIXES: .c
+
+SHUTDOWN.EXE:  \
+  SHUTDOWN.OBJ \
+  SHUTDOWN.DEF \
+  MAKEFILE
+   @REM @<<SHUTDOWN.@0
+     /W /ST:8192 /BAS:0x10000 /NOL /PM:PM +
+     SHUTDOWN.OBJ
+     SHUTDOWN.EXE
+     
+     
+     SHUTDOWN.DEF;
+<<
+   LINK386.EXE @SHUTDOWN.@0
+
+{.}.c.obj:
+   ICC.EXE /Gm /C .\$*.c
+
+!include MAKEFILE.DEP

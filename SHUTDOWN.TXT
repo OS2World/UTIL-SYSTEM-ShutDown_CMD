@@ -1,0 +1,15 @@
+This program issues a broadcast message to the Desktop frame windows
+as WM_SYSCOMMAND, uscmd SC_CLOSE, to BMSG_FRAMEONLY.  Each frame
+window issues itself and its client WM_CLOSE.  There is no confirmation
+of shutdown from SHUTDOWN itself.  However, running applications are
+given the usual desktop shutdown messages and can save files, etc.
+before the desktop WinShutdownSystem call is completed.
+
+This is a bare-bones type of program.  If you need confirmation
+prior to launching this program, obtain it in the invoking REXX
+or program object.
+
+Author:  Bruce E. H”gman.
+Copyright:  (C) 1993 Bruce E. H”gman.  All Rights Reserved.
+
+The program and source code are dedicated to the Public Domain.
